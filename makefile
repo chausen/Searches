@@ -4,10 +4,10 @@
 CC=g++
 CFLAGS= -c -g
 
-all: driver
+all: search
 
-driver: Driver.o Searches.o
-	$(CC) -o Driver Driver.o Searches.o
+search: Driver.o Searches.o
+	$(CC) -o search driver.o Searches.o
 
 Driver.o: Driver.cpp
 	$(CC) $(CFLAGS) Driver.cpp
@@ -16,4 +16,4 @@ Searches.o: Searches.cpp
 	$(CC) $(CFLAGS) Searches.cpp
 
 clean:
-	rm -rf *.o Driver
+	rm -rf *.o search
